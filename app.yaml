@@ -4,8 +4,9 @@ threadsafe: true
 
 handlers:
   - url: /
-    static_files: index.html
-    upload: index.html
+    static_files: main/index.html
+    upload: main/index.html
 
   - url: /(.*)
-    script: auto
+    static_files: main/\1
+    upload: main/(.*)
